@@ -32,7 +32,19 @@ export default {
       loginForm:{
         username:"admin",
         password:"admin123"
-      }
+      },
+      //表单的验证规则
+      loginFormRules:{
+        username:[
+          {required:true,message:"请输入用户名",trigger:"blur"},
+          {min:3,max:10,message: "用户名长度在3到10个字符之间",trigger: "blur"},
+        ],
+        password:[
+          {required:true,message:"请输入密码",trigger:"blur"},
+          {min:8,max:16,message: "密码长度设置在8到16个字符之间",trigger: "blur"}
+        ]
+      },
+
     }
   }
 }
