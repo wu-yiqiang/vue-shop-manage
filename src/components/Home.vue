@@ -13,10 +13,10 @@
       <!--侧边栏-->
       <el-aside width="200px">
         <!--侧边栏菜单效果-->
-        <el-menu   background-color="#333744" text-color="#fff" active-text-color="#ffd04b" :key="menulist.id" v-for="(item,index) in menulist">
-          <el-submenu :index="item.id+''">
+        <el-menu   background-color="#333744" text-color="#fff" active-text-color="#409eff"  unique-opened>
+          <el-submenu :index="item.id+''" :key="menulist.id" v-for="(item,index) in menulist">
             <template slot="title">
-              <i class="el-icon-location"></i>
+              <i :class="iconsObj[item.id]"></i>
               <span>{{item.authName}}</span>
             </template>
             <!--二级菜单-->
@@ -41,6 +41,13 @@ export default {
   data(){
     return {
       menulist:[],
+      iconsObj: {
+        125: 'iconfont icon-user',
+        103: 'iconfont icon-tijikongjian',
+        101: 'iconfont icon-shangpin',
+        102: 'iconfont icon-danju',
+        145: 'iconfont icon-baobiao'
+      }
     }
   },
   created() {
@@ -86,8 +93,15 @@ export default {
   }
   .el-aside{
     background-color: #333744;
+    .el-menu {
+      border-right: none;
+    }
   }
   .el-main {
     background-color: #eaedf1;
+
+  }
+  .iconfont {
+    margin-right: 10px;
   }
 </style>
