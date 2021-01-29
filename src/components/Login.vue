@@ -17,7 +17,7 @@
         </el-form-item>
         <!-- 按钮 -->
         <el-form-item class="btns">
-          <el-button type="primary">登录</el-button>
+          <el-button type="primary" @click="login()">登录</el-button>
           <el-button type="info" @click="resetLoginForm()">重置</el-button>
         </el-form-item>
       </el-form>
@@ -33,8 +33,8 @@ export default {
   data(){
     return {
       loginForm:{
-        username:"",
-        password:""
+        username:"admin",
+        password:"123456"
       },
       //表单的验证规则
       loginFormRules:{
@@ -44,7 +44,7 @@ export default {
         ],
         password:[
           {required:true,message:"请输入密码",trigger:"blur"},
-          {min:8,max:16,message: "密码长度设置在8到16个字符之间",trigger: "blur"}
+          {min:6,max:16,message: "密码长度设置在8到16个字符之间",trigger: "blur"}
         ]
       },
 
@@ -54,6 +54,21 @@ export default {
     //重置登陆表单
     resetLoginForm(){
      this.$refs.loginFormRef.resetFields()
+    },
+    //登录按键预校验功能
+    login(){
+       this.$refs.loginFormRef.validate(async valid=>{
+         if(!valid) return
+         const {data:res}=await this.$http.post("login",this.loginForm)
+         if(res.meta.status!==200) return this.$message.error(res.meta.msg)
+         this.$message.success(res.meta.msg,500,true)
+
+         //存储服务器返回的token，并且存储token到localstorage
+         sessionStorage.setItem("vuetoken",res.data.token)
+         //对页面进行跳转
+         //延迟跳转
+         this.$router.push("/home")
+       })
     }
   }
 }
