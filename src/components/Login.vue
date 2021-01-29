@@ -60,8 +60,12 @@ export default {
        this.$refs.loginFormRef.validate(async valid=>{
          if(!valid) return
          const {data:res}=await this.$http.post("login",this.loginForm)
-         if(res.meta.status!==200) return this.$message.error(res.meta.msg)
-         this.$message.success(res.meta.msg,500,true)
+         if(res.meta.status!==200) return this.$message.error({message:res.meta.msg,duration:500,center:true})
+         this.$message.success({
+           message:res.meta.msg,
+           duration:500,
+           center:true,
+         })
 
          //存储服务器返回的token，并且存储token到localstorage
          sessionStorage.setItem("vuetoken",res.data.token)

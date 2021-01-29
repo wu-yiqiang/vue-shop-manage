@@ -14,4 +14,12 @@ const router = new VueRouter({
   routes
 })
 
+
+//注册路由导航守卫
+router.beforeEach((to,from,next)=>{
+  if(to.path==="/login") return next()
+  const token=window.sessionStorage.getItem("vuetoken")
+  if(!token) return next("/login")
+  next()
+})
 export default router
