@@ -75,7 +75,7 @@ export default {
       const {data:res}=await this.$http.get("menus")
       if(res.meta.status!==200) return this.$message.error(res.meta.mag)
       this.menulist=res.data
-      console.log(res)
+
     },
     toggleCollapse(){
       this.isCollapse=!this.isCollapse
