@@ -17,20 +17,20 @@
         <div class="toggle-button" @click="toggleCollapse()">
           |||
         </div>
-        <el-menu   background-color="#333744" text-color="#fff" active-text-color="#409eff"  unique-opened :collapse="isCollapse" :collapse-transition="false">
+        <el-menu   background-color="#333744" text-color="#fff" active-text-color="#409eff"  unique-opened :collapse="isCollapse" :collapse-transition="false" router>
           <el-submenu :index="item.id+''" :key="menulist.id" v-for="(item,index) in menulist" >
             <template slot="title">
               <i :class="iconsObj[item.id]"></i>
               <span>{{item.authName}}</span>
             </template>
             <!--二级菜单-->
-            <el-submenu :index="subitem.id+''" :key="subitem.id" v-for="subitem in item.children">
+            <el-menu-item :index="'/'+subitem.path" :key="subitem.id" v-for="subitem in item.children" >
               <template slot="title" >
                 <i class="el-icon-menu"></i>
                 <span slot="title">{{subitem.authName}}</span>
               </template>
-            </el-submenu>
-          </el-submenu>
+            </el-menu-item>
+          </el-submenu >
         </el-menu>
       </el-aside>
       <!--右边主体区域-->
