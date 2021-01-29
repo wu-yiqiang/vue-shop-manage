@@ -13,18 +13,20 @@
       <!--侧边栏-->
       <el-aside width="200px">
         <!--侧边栏菜单效果-->
-        <el-menu   background-color="#333744" text-color="#fff" active-text-color="#ffd04b">
-          <el-submenu index="1">
+        <el-menu   background-color="#333744" text-color="#fff" active-text-color="#ffd04b" :key="menulist.id" v-for="(item,index) in menulist">
+          <el-submenu :index="item.id+''">
             <template slot="title">
               <i class="el-icon-location"></i>
-              <span>一级菜单</span>
+              <span>{{item.authName}}</span>
             </template>
             <!--二级菜单-->
-            <el-submenu index="1-1">
-              <template slot="title"><i class="el-icon-menu"></i><span slot="title">二级菜单</span></template>
+            <el-submenu :index="subitem.id+''" :key="subitem.id" v-for="subitem in item.children">
+              <template slot="title" >
+                <i class="el-icon-menu"></i>
+                <span slot="title">{{subitem.authName}}</span>
+              </template>
             </el-submenu>
           </el-submenu>
-
         </el-menu>
       </el-aside>
       <!--右边主体区域-->
@@ -36,12 +38,27 @@
 
 <script>
 export default {
+  data(){
+    return {
+      menulist:[],
+    }
+  },
+  created() {
+    this.getMenuList()
+  },
   methods:{
     //退出
     logout(){
       window.sessionStorage.clear()
       this.$router.push("/login")
     },
+    //获取得到的菜单列表
+    async getMenuList(){
+      const {data:res}=await this.$http.get("menus")
+      if(res.meta.status!==200) return this.$message.error(res.meta.mag)
+      this.menulist=res.data
+      console.log(res)
+    }
   }
 }
 </script>
