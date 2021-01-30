@@ -52,17 +52,14 @@
 
           </template>
         </el-table-column>
-        <el-table-column
-            prop="Operation"
-            label="操作" align="center">
-          <template >
-            <el-button size="mini" type="primary" @click="handleEdit(scope.$index, scope.row)" class="el-icon-edit">
-
+        <el-table-column prop="Operation" label="操作" align="center">
+          <template slot-scope="scope">
+            <el-button size="mini" type="primary" @click="handleEdit(scope.row.id)" class="el-icon-edit">
             </el-button>
-            <el-button size="mini" type="danger" @click="handleDelete(scope.$index, scope.row)" class="el-icon-delete">
+            <el-button size="mini" type="danger" @click="handleDelete(scope.row.id)" class="el-icon-delete">
             </el-button>
             <el-tooltip content="角色权限" placement="top" :enterable="false">
-              <el-button size="mini" type="primary" @click="handleDelete(scope.$index, scope.row)" class="el-icon-setting">
+              <el-button size="mini" type="primary"  class="el-icon-setting">
               </el-button>
             </el-tooltip>
           </template>
@@ -106,6 +103,16 @@
             <el-button type="primary" @click="dialogVisible = false">确 定</el-button>
         </span>
       </el-dialog>
+
+      <!--用户信息编辑框-->
+      <el-dialog title="编辑用户信息" :visible.sync="editdialogVisible" width="30%">
+        <span>这是一段信息</span>
+        <span slot="footer" class="dialog-footer">
+          <el-button @click="dialogVisible = false">取 消</el-button>
+          <el-button type="primary" @click="dialogVisible = false">确 定</el-button>
+        </span>
+      </el-dialog>
+
     </el-card>
   </div>
 </template>
@@ -156,8 +163,10 @@
         total:0,
         userlist:[],
         findDate:"",
-        //提示框显现
+        //添加信息对话框
         dialogVisible: false,
+        //用户信息编辑对话框
+        editdialogVisible:false,
         /*新增用户信息的校验规则*/
        inputInfoRef:{
          username:"",
@@ -187,6 +196,7 @@
             { required: true, message: '请再次输入密码', trigger: 'blur' },
             { validator: check_repassword, trigger: 'blur' }
           ],
+
         },
 
       }
@@ -204,13 +214,31 @@
         this.currentpage=res.data.pagenum
         //console.log(this.userlist)
       },
-      handleSizeChange(){
+      handleSizeChange(val){
+        //改变每页的用户数量
+        this.queryData.pagenum=1
+        this.queryData.pagesize=val
+        this.getUsersData()
 
       },
-      /*获取当前页数*/
-      handleCurrentChange(){
+      handleCurrentChange(val){
+        /*获取当前页数*/
+        this.queryData.pagenum=val
+        this.getUsersData()
+      },
+      async handleDelete(val1){
+        //根据id删除用户
+        const {data:res}=await this.$http.delete(`users/${val1}`)
+        if(res.meta.status!=200) return this.$message.error(res.meta.msg)
+        this.getUsersData()
+      },
+      async handleEdit(id){
+        //编辑用户信息
+        this.editdialogVisible=true
+        //通过id修改用户数据
 
       },
+
       /*切换用户状态*/
       async changeUserStatus(userinfo){
         //发送put请求改变该用户的状态
