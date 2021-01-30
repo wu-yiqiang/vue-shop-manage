@@ -73,7 +73,7 @@ export default {
     //获取得到的菜单列表
     async getMenuList(){
       const {data:res}=await this.$http.get("menus")
-      if(res.meta.status!==200) return this.$message.error(res.meta.mag)
+      if(res.meta.status!==200) return this.$message.error(res.meta.msg)
       this.menulist=res.data
 
     },

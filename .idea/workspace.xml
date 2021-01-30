@@ -28,7 +28,7 @@
     <property name="go.sdk.automatically.set" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/assets" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -69,5 +69,9 @@
       <screen x="0" y="39" width="1920" height="1041" />
     </state>
     <state x="678" y="254" key="FileChooserDialogImpl/0.39.1920.1041@0.39.1920.1041" timestamp="1611885787297" />
+    <state x="386" y="74" key="SettingsEditor" timestamp="1612010819093">
+      <screen x="0" y="39" width="1920" height="1041" />
+    </state>
+    <state x="386" y="74" key="SettingsEditor/0.39.1920.1041@0.39.1920.1041" timestamp="1612010819093" />
   </component>
 </project>
