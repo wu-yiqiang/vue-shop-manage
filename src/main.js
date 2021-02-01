@@ -9,7 +9,8 @@ import './assets/fonts/iconfont.css'
 
 // 导入全局样式
 import './assets/css/global.css'
-
+//第三方插件
+import TreeTable from "vue-table-with-tree-grid"
 Vue.config.productionTip = false
 
 //axios请求
@@ -31,6 +32,7 @@ axios.interceptors.response.use(res =>{
   return res
 })
 
+Vue.component("tree-table",TreeTable)
 
 new Vue({
   router,

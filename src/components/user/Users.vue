@@ -58,8 +58,8 @@
             </el-button>
             <el-button size="mini" type="danger" @click="handleDelete(scope.row.id)" class="el-icon-delete">
             </el-button>
-            <el-tooltip content="角色权限" placement="top" :enterable="false">
-              <el-button size="mini" type="primary"  class="el-icon-setting">
+            <el-tooltip content="角色权限" placement="top" :enterable="false" >
+              <el-button size="mini" type="primary"  class="el-icon-setting" @click="disRolesFram()">
               </el-button>
             </el-tooltip>
           </template>
@@ -112,7 +112,14 @@
           <el-button type="primary" @click="dialogVisible = false">确 定</el-button>
         </span>
       </el-dialog>
+      <!--角色分配弹框-->
+      <el-dialog title="角色权限分配" :visible.sync="rolesdialogVisible" width="30%" >
 
+        <span slot="footer" class="dialog-footer">
+          <el-button @click="rolesdialogVisible= false">取 消</el-button>
+          <el-button type="primary" @click="rolesdialogVisible = false">确 定</el-button>
+        </span>
+      </el-dialog>
     </el-card>
   </div>
 </template>
@@ -167,6 +174,7 @@
         dialogVisible: false,
         //用户信息编辑对话框
         editdialogVisible:false,
+
         /*新增用户信息的校验规则*/
        inputInfoRef:{
          username:"",
@@ -198,8 +206,11 @@
           ],
 
         },
+        /*角色分配弹框*/
+        rolesdialogVisible:false,
 
       }
+
     },
     created(){
       //发送请求
@@ -254,6 +265,10 @@
       //弹出对话提示框
       addUserInfo(){
         this.dialogVisible=true
+      },
+      disRolesFram() {
+        //显示角色权限弹框
+        this.rolesdialogVisible=true
       },
     }
   }
