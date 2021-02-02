@@ -1966,3 +1966,15 @@
 [2021-02-01T22:50:03.548] [DEBUG] cheese - admin
 [2021-02-01T22:50:03.562] [DEBUG] cheese - null
 [2021-02-01T22:50:03.563] [DEBUG] cheese - null
+[2021-02-01T23:27:58.467] [DEBUG] cheese - login => username:admin,password:123456
+[2021-02-01T23:27:58.471] [DEBUG] cheese - admin
+[2021-02-01T23:27:58.523] [DEBUG] cheese - null
+[2021-02-01T23:27:58.524] [DEBUG] cheese - null
+[2021-02-01T23:48:21.734] [DEBUG] cheese - login => username:admin,password:123456
+[2021-02-01T23:48:21.736] [DEBUG] cheese - admin
+[2021-02-01T23:48:21.759] [DEBUG] cheese - null
+[2021-02-01T23:48:21.761] [DEBUG] cheese - null
+[2021-02-02T09:00:53.040] [DEBUG] cheese - login => username:admin,password:123456
+[2021-02-02T09:00:53.042] [DEBUG] cheese - admin
+[2021-02-02T09:00:53.075] [DEBUG] cheese - null
+[2021-02-02T09:00:53.076] [DEBUG] cheese - null

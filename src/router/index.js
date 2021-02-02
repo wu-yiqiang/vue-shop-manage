@@ -13,6 +13,8 @@ import Users from "../components/user/Users.vue"
 
 //商品分类组件
 import Cate from "../components/goods/Cate.vue"
+//商品分类参数
+import Params from "../components/goods/Params.vue"
 const routes = [
   {path: '/', redirect: '/login'},
   {path: '/login', component: Login},
@@ -20,8 +22,9 @@ const routes = [
       {path:'/welcome',component:Welcome},
       {path:"/users",component: Users},
       {path:"/rights",component: Rights},
-    { path: "/roles", component: Roles },
-      {path:"/categories",component:Cate}
+      { path: "/roles", component: Roles },
+      { path: "/categories", component: Cate },
+      { path: "/params", component: Params },
     ]},
 ]
 

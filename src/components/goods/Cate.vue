@@ -43,9 +43,19 @@
             <el-pagination @size-change="handleSizeChange" @current-change="handleCurrentChange" :current-page="queryInfo.pagenum" :page-sizes="[3, 5, 10, 15]" :page-size="queryInfo.pagesize" layout="total, sizes, prev, pager, next, jumper" :total="total">
             </el-pagination>
         </el-card>
+        
         <!-- 分类对话框 -->
-        <el-dialog title="添加商品" :visible.sync="addGoodsDialogVisible" width="30%" :before-close="handleClose">
-            <span>这是一段信息</span>
+        <el-dialog title="添加商品" :visible.sync="addGoodsDialogVisible" width="30%" >
+            <!-- 添加分类的表单 -->
+            <el-form :model="addCateForm" :rules="addCateFormRules" ref="addCateFormRef" label-width="100px">
+                <el-form-item label="分类名称" prop="cate_name">
+                    <el-input v-model="addCateForm.cate_name"></el-input>
+                </el-form-item>
+                <el-form-item label="父级分类" >
+                     <el-cascader  :options="parentCateList" :props="cascaderProps" v-model="selectedKeys" @change="parentCateChanged" clearable></el-cascader>
+                </el-form-item>
+               
+            </el-form>
             <span slot="footer" class="dialog-footer">
                 <el-button @click="dialogVisible = false">取 消</el-button>
                 <el-button type="primary" @click="dialogVisible = false">确 定</el-button>
@@ -77,7 +87,35 @@ export default {
                 pagesize:5,
             },
             //增加用户对话框
-            addGoodsDialogVisible:false
+            addGoodsDialogVisible:false,
+            //添加用户表单
+            addCateForm:{
+                //分类名称
+                cate_name:"",
+                // 父级分类id
+                cate_pid:0,
+                //等级
+                cate_level:0,
+            },
+            //校验规则
+            addCateFormRules:{
+                cate_name:[
+                    {required:true,message:"请输入分类名称！！！",trigger:"blur"}
+                ],     
+            },
+             // 父级分类列表
+            parentCateList: [],
+            // 指定级联选择器的配置对象
+            cascaderProps: {
+                value: 'cat_id',
+                label: 'cat_name',
+                children: 'children',
+                expandTrigger: 'hover',
+                checkStrictly: true
+            },
+            // 选中的父级分类的 ID 数组
+            selectedKeys: [],
+
           
         }
     },
@@ -91,7 +129,7 @@ export default {
             const {data:res}=await this.$http.get("categories",{
                 params:this.queryInfo
             })
-            console.log(res)
+        
             if(res.meta.status!==200) return this.$message.error(res.meta.msg)
             this.catelist=res.data.result
             this.total=res.data.total
@@ -108,10 +146,52 @@ export default {
             this.getCateList()
         },
         addGoodsInfo(){
-            //添加用户
-
+            //添加商品分类
+            this.getParentCateList()
             this.addGoodsDialogVisible=true
-        }
+        },
+         // 获取父级分类的列表
+        async getParentCateList() {
+            const { data: res } = await this.$http.get('categories', {
+                params: {
+                type: 2 // 获取前两级的所有分类
+                }
+            })
+            if (res.meta.status !== 200) {
+                return this.$message.error('获取父级分类数据失败')
+            }
+            // 存一下
+            this.parentCateList = res.data
+            },
+        },
+          // 选择项发生变化会触发的函数
+    parentCateChanged() {
+      // 如果 selectedKeys 数组的 length 大于 0，证明选中了父级分类
+      if (this.selectedKeys.length > 0) {
+        // 父级分类的 ID
+        this.addCateForm.cat_pid = this.selectedKeys[
+          this.selectedKeys.length - 1
+        ]
+        // 为当前分类的等级赋值
+        this.addCateForm.cat_level = this.selectedKeys.length
+      } else {
+        this.addCateForm.cat_pid = 0
+        this.addCateForm.cat_level = 0
+      }
+    },
+    // 点击按钮添加新的分类
+    addCate() {
+      console.log(this.addCateForm)
+      // this.addCateDialogVisible = false
+    },
+    // 监听对话框的关闭事件，重置表单数据
+    addCateDialogClosed() {
+      this.$refs.addCateFormRef.resetFields()
+      // 选择到的父分类 ID
+      this.selectedKeys = []
+      // 准备提交到后台的分类等级和分类 ID
+      this.addCateForm.cat_level = 0
+      this.addCateForm.cat_pid = 0
     }
 }
 </script>
