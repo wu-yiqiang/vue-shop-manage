@@ -161,8 +161,7 @@ export default {
     async addParamSubmitForm(){
       //确定添加参数或者属性
       if(this.addParamsRuleForm.params.trim().length===0) return this.$message.error("请输入值!!!")
-      
-     
+
       // const {data:res}=await this.$http.post("categories/${}/attributes",{attr_name:this.addParamsRuleForm.params.trim(),attr_sel:,attr_vals:})
 
       // if(res.meta.status!==201) return this.$message.error(res.meta.msg)

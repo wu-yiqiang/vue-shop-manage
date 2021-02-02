@@ -14,7 +14,9 @@ import Users from "../components/user/Users.vue"
 //商品分类组件
 import Cate from "../components/goods/Cate.vue"
 //商品分类参数
-import Params from "../components/goods/Params.vue"
+import Params from "../components/goods/Params.vue"   
+//商品列表模块
+import Lists from "../components/goods/Lists.vue" 
 const routes = [
   {path: '/', redirect: '/login'},
   {path: '/login', component: Login},
@@ -25,6 +27,8 @@ const routes = [
       { path: "/roles", component: Roles },
       { path: "/categories", component: Cate },
       { path: "/params", component: Params },
+    { path: "/lists", component: Lists }
+      
     ]},
 ]
 
