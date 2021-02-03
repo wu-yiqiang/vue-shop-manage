@@ -32,8 +32,19 @@ axios.interceptors.response.use(res =>{
   return res
 })
 
-Vue.component("tree-table",TreeTable)
+Vue.component("tree-table", TreeTable)
 
+//时间过滤器
+Vue.filter("dateFormat", function (originVal) {
+  const dt = new Date(originVal)
+  const Y = dt.getFullYear
+  const M = (dt.getMonth + 1).toString().padStart(2, "0")
+  const D = (dt.getDate).toString().padStart(2, "0")
+  const hh = (dt.getHours).toString().padStart(2, "0")
+  const mm = (dt.getMinutes).toString().padStart(2, "0")
+  const ss = (dt.getSeconds).toString().padStart(2, "0")
+  return `${Y}-${M}-${D} ${hh}:${mm}:${ss}`
+})
 new Vue({
   router,
   render: h => h(App)

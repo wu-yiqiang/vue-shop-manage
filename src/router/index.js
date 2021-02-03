@@ -6,8 +6,6 @@ import Home from "../components/Home.vue"
 import Rights from "../components/power/Rights.vue"
 //角色组件
 import Roles from "../components/power/Roles.vue"
-Vue.use(VueRouter)
-
 import Welcome from "../components/Welcome.vue"
 import Users from "../components/user/Users.vue"
 
@@ -17,6 +15,9 @@ import Cate from "../components/goods/Cate.vue"
 import Params from "../components/goods/Params.vue"   
 //商品列表模块
 import Lists from "../components/goods/Lists.vue" 
+//添加商品
+import AddGoods from "../components/goods/Add.vue"
+Vue.use(VueRouter)
 const routes = [
   {path: '/', redirect: '/login'},
   {path: '/login', component: Login},
@@ -27,7 +28,8 @@ const routes = [
       { path: "/roles", component: Roles },
       { path: "/categories", component: Cate },
       { path: "/params", component: Params },
-    { path: "/lists", component: Lists }
+    { path: "/goods", component: Lists },
+    {path:"/goods/add",component:AddGoods},
       
     ]},
 ]
