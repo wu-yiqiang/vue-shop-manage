@@ -1,0 +1,726 @@
+数据库连接参数 {"protocol":"mysql","host":"127.0.0.1","database":"my_db_01","port":3306,"user":"root","password":"magicbook","query":{"pool":true,"debug":true}}
+*****************************************
+拦截服务 => CategoryService
+*****************************************
+action => getAllCategories
+action => getCategoryById
+action => addCategory
+action => updateCategory
+action => deleteCategory
+*****************************************
+
+*****************************************
+拦截服务 => AttributeService
+*****************************************
+action => getAttributes
+action => createAttribute
+action => updateAttribute
+action => deleteAttribute
+action => attributeById
+*****************************************
+
+*****************************************
+拦截服务 => GoodService
+*****************************************
+action => createGood
+action => deleteGood
+action => getAllGoods
+action => updateGood
+action => updateGoodPics
+action => updateGoodAttributes
+action => updateGoodsState
+action => getGoodById
+*****************************************
+
+*****************************************
+拦截服务 => OrderService
+*****************************************
+action => createOrder
+action => getAllOrders
+action => getOrder
+action => updateOrder
+*****************************************
+
+*****************************************
+拦截服务 => ReportsService
+*****************************************
+action => reports
+*****************************************
+
+*****************************************
+拦截服务 => RightService
+*****************************************
+action => getAllRights
+*****************************************
+
+*****************************************
+拦截服务 => RoleService
+*****************************************
+action => getAllRoles
+action => createRole
+action => getRoleById
+action => updateRole
+action => updateRoleRight
+action => deleteRoleRight
+action => deleteRole
+action => authRight
+*****************************************
+
+*****************************************
+拦截服务 => ManagerService
+*****************************************
+action => getAllManagers
+action => createManager
+action => updateManager
+action => getManager
+action => deleteManager
+action => setRole
+action => updateMgrState
+action => login
+*****************************************
+
+
+******************************************************
+		MoaJS Apis Dump
+******************************************************
+
+┌─────────────────────────────────────────────────────────────────────────────────────────────┬────────┬───────────────────────────────────────────────────┐
+│ File                                                                                        │ Method │ Path                                              │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/categories.js │ get    │ /api/private/v1/categories                        │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/categories.js │ post   │ /api/private/v1/categories                        │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/categories.js │ get    │ /api/private/v1/categories/:id                    │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/categories.js │ delete │ /api/private/v1/categories/:id                    │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/categories.js │ put    │ /api/private/v1/categories/:id                    │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/categories.js │ get    │ /api/private/v1/categories/:id/attributes         │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/categories.js │ get    │ /api/private/v1/categories/:id/attributes/:attrId │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/categories.js │ post   │ /api/private/v1/categories/:id/attributes         │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/categories.js │ put    │ /api/private/v1/categories/:id/attributes/:attrId │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/categories.js │ delete │ /api/private/v1/categories/:id/attributes/:attrId │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/goods.js      │ get    │ /api/private/v1/goods                             │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/goods.js      │ post   │ /api/private/v1/goods                             │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/goods.js      │ put    │ /api/private/v1/goods/:id                         │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/goods.js      │ get    │ /api/private/v1/goods/:id                         │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/goods.js      │ delete │ /api/private/v1/goods/:id                         │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/goods.js      │ put    │ /api/private/v1/goods/:id/pics                    │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/goods.js      │ put    │ /api/private/v1/goods/:id/attributes              │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/goods.js      │ put    │ /api/private/v1/goods/:id/state/:state            │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/menus.js      │ get    │ /api/private/v1/menus                             │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/orders.js     │ get    │ /api/private/v1/orders                            │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/orders.js     │ post   │ /api/private/v1/orders                            │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/orders.js     │ put    │ /api/private/v1/orders/:id                        │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/orders.js     │ get    │ /api/private/v1/orders/:id                        │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/reports.js    │ get    │ /api/private/v1/reports/type/:typeid              │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/rights.js     │ get    │ /api/private/v1/rights/:type                      │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/roles.js      │ get    │ /api/private/v1/roles                             │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/roles.js      │ post   │ /api/private/v1/roles                             │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/roles.js      │ get    │ /api/private/v1/roles/:id                         │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/roles.js      │ put    │ /api/private/v1/roles/:id                         │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/roles.js      │ delete │ /api/private/v1/roles/:id                         │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/roles.js      │ post   │ /api/private/v1/roles/:id/rights                  │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/roles.js      │ delete │ /api/private/v1/roles/:id/rights/:rightId         │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/upload.js     │ post   │ /api/private/v1/upload                            │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/users.js      │ get    │ /api/private/v1/users                             │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/users.js      │ get    │ /api/private/v1/users/:id                         │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/users.js      │ post   │ /api/private/v1/users                             │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/users.js      │ put    │ /api/private/v1/users/:id                         │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/users.js      │ delete │ /api/private/v1/users/:id                         │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/users.js      │ put    │ /api/private/v1/users/:id/role                    │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/users.js      │ put    │ /api/private/v1/users/:id/state/:state            │
+└─────────────────────────────────────────────────────────────────────────────────────────────┴────────┴───────────────────────────────────────────────────┘
+数据库连接参数 {"protocol":"mysql","host":"127.0.0.1","database":"my_db_01","port":3306,"user":"root","password":"magicbook","query":{"pool":true,"debug":true}}
+*****************************************
+拦截服务 => CategoryService
+*****************************************
+action => getAllCategories
+action => getCategoryById
+action => addCategory
+action => updateCategory
+action => deleteCategory
+*****************************************
+
+*****************************************
+拦截服务 => AttributeService
+*****************************************
+action => getAttributes
+action => createAttribute
+action => updateAttribute
+action => deleteAttribute
+action => attributeById
+*****************************************
+
+*****************************************
+拦截服务 => GoodService
+*****************************************
+action => createGood
+action => deleteGood
+action => getAllGoods
+action => updateGood
+action => updateGoodPics
+action => updateGoodAttributes
+action => updateGoodsState
+action => getGoodById
+*****************************************
+
+*****************************************
+拦截服务 => OrderService
+*****************************************
+action => createOrder
+action => getAllOrders
+action => getOrder
+action => updateOrder
+*****************************************
+
+*****************************************
+拦截服务 => ReportsService
+*****************************************
+action => reports
+*****************************************
+
+*****************************************
+拦截服务 => RightService
+*****************************************
+action => getAllRights
+*****************************************
+
+*****************************************
+拦截服务 => RoleService
+*****************************************
+action => getAllRoles
+action => createRole
+action => getRoleById
+action => updateRole
+action => updateRoleRight
+action => deleteRoleRight
+action => deleteRole
+action => authRight
+*****************************************
+
+*****************************************
+拦截服务 => ManagerService
+*****************************************
+action => getAllManagers
+action => createManager
+action => updateManager
+action => getManager
+action => deleteManager
+action => setRole
+action => updateMgrState
+action => login
+*****************************************
+
+
+******************************************************
+		MoaJS Apis Dump
+******************************************************
+
+┌─────────────────────────────────────────────────────────────────────────────────────────────┬────────┬───────────────────────────────────────────────────┐
+│ File                                                                                        │ Method │ Path                                              │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/categories.js │ get    │ /api/private/v1/categories                        │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/categories.js │ post   │ /api/private/v1/categories                        │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/categories.js │ get    │ /api/private/v1/categories/:id                    │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/categories.js │ delete │ /api/private/v1/categories/:id                    │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/categories.js │ put    │ /api/private/v1/categories/:id                    │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/categories.js │ get    │ /api/private/v1/categories/:id/attributes         │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/categories.js │ get    │ /api/private/v1/categories/:id/attributes/:attrId │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/categories.js │ post   │ /api/private/v1/categories/:id/attributes         │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/categories.js │ put    │ /api/private/v1/categories/:id/attributes/:attrId │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/categories.js │ delete │ /api/private/v1/categories/:id/attributes/:attrId │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/goods.js      │ get    │ /api/private/v1/goods                             │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/goods.js      │ post   │ /api/private/v1/goods                             │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/goods.js      │ put    │ /api/private/v1/goods/:id                         │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/goods.js      │ get    │ /api/private/v1/goods/:id                         │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/goods.js      │ delete │ /api/private/v1/goods/:id                         │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/goods.js      │ put    │ /api/private/v1/goods/:id/pics                    │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/goods.js      │ put    │ /api/private/v1/goods/:id/attributes              │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/goods.js      │ put    │ /api/private/v1/goods/:id/state/:state            │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/menus.js      │ get    │ /api/private/v1/menus                             │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/orders.js     │ get    │ /api/private/v1/orders                            │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/orders.js     │ post   │ /api/private/v1/orders                            │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/orders.js     │ put    │ /api/private/v1/orders/:id                        │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/orders.js     │ get    │ /api/private/v1/orders/:id                        │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/reports.js    │ get    │ /api/private/v1/reports/type/:typeid              │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/rights.js     │ get    │ /api/private/v1/rights/:type                      │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/roles.js      │ get    │ /api/private/v1/roles                             │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/roles.js      │ post   │ /api/private/v1/roles                             │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/roles.js      │ get    │ /api/private/v1/roles/:id                         │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/roles.js      │ put    │ /api/private/v1/roles/:id                         │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/roles.js      │ delete │ /api/private/v1/roles/:id                         │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/roles.js      │ post   │ /api/private/v1/roles/:id/rights                  │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/roles.js      │ delete │ /api/private/v1/roles/:id/rights/:rightId         │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/upload.js     │ post   │ /api/private/v1/upload                            │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/users.js      │ get    │ /api/private/v1/users                             │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/users.js      │ get    │ /api/private/v1/users/:id                         │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/users.js      │ post   │ /api/private/v1/users                             │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/users.js      │ put    │ /api/private/v1/users/:id                         │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/users.js      │ delete │ /api/private/v1/users/:id                         │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/users.js      │ put    │ /api/private/v1/users/:id/role                    │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/users.js      │ put    │ /api/private/v1/users/:id/state/:state            │
+└─────────────────────────────────────────────────────────────────────────────────────────────┴────────┴───────────────────────────────────────────────────┘
+events.js:292
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::8888
+    at Server.setupListenHandle [as _listen2] (net.js:1318:16)
+    at listenInCluster (net.js:1366:12)
+    at Server.listen (net.js:1452:7)
+    at Function.listen (C:\Users\windows\Project\vue-shop-manage\vue_api_server\node_modules\express\lib\application.js:618:24)
+    at Object.<anonymous> (C:\Users\windows\Project\vue-shop-manage\vue_api_server\app.js:125:5)
+    at Module._compile (internal/modules/cjs/loader.js:1063:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)
+    at Module.load (internal/modules/cjs/loader.js:928:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:769:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)
+    at internal/main/run_main_module.js:17:47
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (net.js:1345:8)
+    at processTicksAndRejections (internal/process/task_queues.js:80:21) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::',
+  port: 8888
+}
+数据库连接参数 {"protocol":"mysql","host":"127.0.0.1","database":"my_db_01","port":3306,"user":"root","password":"magicbook","query":{"pool":true,"debug":true}}
+*****************************************
+拦截服务 => CategoryService
+*****************************************
+action => getAllCategories
+action => getCategoryById
+action => addCategory
+action => updateCategory
+action => deleteCategory
+*****************************************
+
+*****************************************
+拦截服务 => AttributeService
+*****************************************
+action => getAttributes
+action => createAttribute
+action => updateAttribute
+action => deleteAttribute
+action => attributeById
+*****************************************
+
+*****************************************
+拦截服务 => GoodService
+*****************************************
+action => createGood
+action => deleteGood
+action => getAllGoods
+action => updateGood
+action => updateGoodPics
+action => updateGoodAttributes
+action => updateGoodsState
+action => getGoodById
+*****************************************
+
+*****************************************
+拦截服务 => OrderService
+*****************************************
+action => createOrder
+action => getAllOrders
+action => getOrder
+action => updateOrder
+*****************************************
+
+*****************************************
+拦截服务 => ReportsService
+*****************************************
+action => reports
+*****************************************
+
+*****************************************
+拦截服务 => RightService
+*****************************************
+action => getAllRights
+*****************************************
+
+*****************************************
+拦截服务 => RoleService
+*****************************************
+action => getAllRoles
+action => createRole
+action => getRoleById
+action => updateRole
+action => updateRoleRight
+action => deleteRoleRight
+action => deleteRole
+action => authRight
+*****************************************
+
+*****************************************
+拦截服务 => ManagerService
+*****************************************
+action => getAllManagers
+action => createManager
+action => updateManager
+action => getManager
+action => deleteManager
+action => setRole
+action => updateMgrState
+action => login
+*****************************************
+
+
+******************************************************
+		MoaJS Apis Dump
+******************************************************
+
+┌─────────────────────────────────────────────────────────────────────────────────────────────┬────────┬───────────────────────────────────────────────────┐
+│ File                                                                                        │ Method │ Path                                              │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/categories.js │ get    │ /api/private/v1/categories                        │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/categories.js │ post   │ /api/private/v1/categories                        │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/categories.js │ get    │ /api/private/v1/categories/:id                    │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/categories.js │ delete │ /api/private/v1/categories/:id                    │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/categories.js │ put    │ /api/private/v1/categories/:id                    │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/categories.js │ get    │ /api/private/v1/categories/:id/attributes         │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/categories.js │ get    │ /api/private/v1/categories/:id/attributes/:attrId │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/categories.js │ post   │ /api/private/v1/categories/:id/attributes         │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/categories.js │ put    │ /api/private/v1/categories/:id/attributes/:attrId │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/categories.js │ delete │ /api/private/v1/categories/:id/attributes/:attrId │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/goods.js      │ get    │ /api/private/v1/goods                             │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/goods.js      │ post   │ /api/private/v1/goods                             │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/goods.js      │ put    │ /api/private/v1/goods/:id                         │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/goods.js      │ get    │ /api/private/v1/goods/:id                         │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/goods.js      │ delete │ /api/private/v1/goods/:id                         │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/goods.js      │ put    │ /api/private/v1/goods/:id/pics                    │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/goods.js      │ put    │ /api/private/v1/goods/:id/attributes              │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/goods.js      │ put    │ /api/private/v1/goods/:id/state/:state            │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/menus.js      │ get    │ /api/private/v1/menus                             │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/orders.js     │ get    │ /api/private/v1/orders                            │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/orders.js     │ post   │ /api/private/v1/orders                            │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/orders.js     │ put    │ /api/private/v1/orders/:id                        │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/orders.js     │ get    │ /api/private/v1/orders/:id                        │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/reports.js    │ get    │ /api/private/v1/reports/type/:typeid              │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/rights.js     │ get    │ /api/private/v1/rights/:type                      │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/roles.js      │ get    │ /api/private/v1/roles                             │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/roles.js      │ post   │ /api/private/v1/roles                             │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/roles.js      │ get    │ /api/private/v1/roles/:id                         │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/roles.js      │ put    │ /api/private/v1/roles/:id                         │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/roles.js      │ delete │ /api/private/v1/roles/:id                         │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/roles.js      │ post   │ /api/private/v1/roles/:id/rights                  │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/roles.js      │ delete │ /api/private/v1/roles/:id/rights/:rightId         │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/upload.js     │ post   │ /api/private/v1/upload                            │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/users.js      │ get    │ /api/private/v1/users                             │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/users.js      │ get    │ /api/private/v1/users/:id                         │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/users.js      │ post   │ /api/private/v1/users                             │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/users.js      │ put    │ /api/private/v1/users/:id                         │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/users.js      │ delete │ /api/private/v1/users/:id                         │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/users.js      │ put    │ /api/private/v1/users/:id/role                    │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/users.js      │ put    │ /api/private/v1/users/:id/state/:state            │
+└─────────────────────────────────────────────────────────────────────────────────────────────┴────────┴───────────────────────────────────────────────────┘
+数据库连接参数 {"protocol":"mysql","host":"127.0.0.1","database":"my_db_01","port":3306,"user":"root","password":"magicbook","query":{"pool":true,"debug":true}}
+*****************************************
+拦截服务 => CategoryService
+*****************************************
+action => getAllCategories
+action => getCategoryById
+action => addCategory
+action => updateCategory
+action => deleteCategory
+*****************************************
+
+*****************************************
+拦截服务 => AttributeService
+*****************************************
+action => getAttributes
+action => createAttribute
+action => updateAttribute
+action => deleteAttribute
+action => attributeById
+*****************************************
+
+*****************************************
+拦截服务 => GoodService
+*****************************************
+action => createGood
+action => deleteGood
+action => getAllGoods
+action => updateGood
+action => updateGoodPics
+action => updateGoodAttributes
+action => updateGoodsState
+action => getGoodById
+*****************************************
+
+*****************************************
+拦截服务 => OrderService
+*****************************************
+action => createOrder
+action => getAllOrders
+action => getOrder
+action => updateOrder
+*****************************************
+
+*****************************************
+拦截服务 => ReportsService
+*****************************************
+action => reports
+*****************************************
+
+*****************************************
+拦截服务 => RightService
+*****************************************
+action => getAllRights
+*****************************************
+
+*****************************************
+拦截服务 => RoleService
+*****************************************
+action => getAllRoles
+action => createRole
+action => getRoleById
+action => updateRole
+action => updateRoleRight
+action => deleteRoleRight
+action => deleteRole
+action => authRight
+*****************************************
+
+*****************************************
+拦截服务 => ManagerService
+*****************************************
+action => getAllManagers
+action => createManager
+action => updateManager
+action => getManager
+action => deleteManager
+action => setRole
+action => updateMgrState
+action => login
+*****************************************
+
+
+******************************************************
+		MoaJS Apis Dump
+******************************************************
+
+┌─────────────────────────────────────────────────────────────────────────────────────────────┬────────┬───────────────────────────────────────────────────┐
+│ File                                                                                        │ Method │ Path                                              │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/categories.js │ get    │ /api/private/v1/categories                        │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/categories.js │ post   │ /api/private/v1/categories                        │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/categories.js │ get    │ /api/private/v1/categories/:id                    │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/categories.js │ delete │ /api/private/v1/categories/:id                    │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/categories.js │ put    │ /api/private/v1/categories/:id                    │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/categories.js │ get    │ /api/private/v1/categories/:id/attributes         │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/categories.js │ get    │ /api/private/v1/categories/:id/attributes/:attrId │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/categories.js │ post   │ /api/private/v1/categories/:id/attributes         │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/categories.js │ put    │ /api/private/v1/categories/:id/attributes/:attrId │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/categories.js │ delete │ /api/private/v1/categories/:id/attributes/:attrId │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/goods.js      │ get    │ /api/private/v1/goods                             │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/goods.js      │ post   │ /api/private/v1/goods                             │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/goods.js      │ put    │ /api/private/v1/goods/:id                         │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/goods.js      │ get    │ /api/private/v1/goods/:id                         │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/goods.js      │ delete │ /api/private/v1/goods/:id                         │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/goods.js      │ put    │ /api/private/v1/goods/:id/pics                    │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/goods.js      │ put    │ /api/private/v1/goods/:id/attributes              │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/goods.js      │ put    │ /api/private/v1/goods/:id/state/:state            │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/menus.js      │ get    │ /api/private/v1/menus                             │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/orders.js     │ get    │ /api/private/v1/orders                            │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/orders.js     │ post   │ /api/private/v1/orders                            │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/orders.js     │ put    │ /api/private/v1/orders/:id                        │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/orders.js     │ get    │ /api/private/v1/orders/:id                        │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/reports.js    │ get    │ /api/private/v1/reports/type/:typeid              │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/rights.js     │ get    │ /api/private/v1/rights/:type                      │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/roles.js      │ get    │ /api/private/v1/roles                             │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/roles.js      │ post   │ /api/private/v1/roles                             │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/roles.js      │ get    │ /api/private/v1/roles/:id                         │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/roles.js      │ put    │ /api/private/v1/roles/:id                         │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/roles.js      │ delete │ /api/private/v1/roles/:id                         │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/roles.js      │ post   │ /api/private/v1/roles/:id/rights                  │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/roles.js      │ delete │ /api/private/v1/roles/:id/rights/:rightId         │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/upload.js     │ post   │ /api/private/v1/upload                            │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/users.js      │ get    │ /api/private/v1/users                             │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/users.js      │ get    │ /api/private/v1/users/:id                         │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/users.js      │ post   │ /api/private/v1/users                             │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/users.js      │ put    │ /api/private/v1/users/:id                         │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/users.js      │ delete │ /api/private/v1/users/:id                         │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/users.js      │ put    │ /api/private/v1/users/:id/role                    │
+├─────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────────────────┤
+│ C:\Users\windows\Project\vue-shop-manage\vue_api_server\routes/api/private/v1/users.js      │ put    │ /api/private/v1/users/:id/state/:state            │
+└─────────────────────────────────────────────────────────────────────────────────────────────┴────────┴───────────────────────────────────────────────────┘
+events.js:292
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::8888
+    at Server.setupListenHandle [as _listen2] (net.js:1318:16)
+    at listenInCluster (net.js:1366:12)
+    at Server.listen (net.js:1452:7)
+    at Function.listen (C:\Users\windows\Project\vue-shop-manage\vue_api_server\node_modules\express\lib\application.js:618:24)
+    at Object.<anonymous> (C:\Users\windows\Project\vue-shop-manage\vue_api_server\app.js:125:5)
+    at Module._compile (internal/modules/cjs/loader.js:1063:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)
+    at Module.load (internal/modules/cjs/loader.js:928:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:769:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)
+    at internal/main/run_main_module.js:17:47
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (net.js:1345:8)
+    at processTicksAndRejections (internal/process/task_queues.js:80:21) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::',
+  port: 8888
+}
