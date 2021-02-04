@@ -17,7 +17,12 @@ import Params from "../components/goods/Params.vue"
 import Lists from "../components/goods/Lists.vue" 
 //添加商品
 import AddGoods from "../components/goods/Add.vue"
+
+
+
 Vue.use(VueRouter)
+
+
 const routes = [
   {path: '/', redirect: '/login'},
   {path: '/login', component: Login},
